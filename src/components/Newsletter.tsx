@@ -94,7 +94,7 @@ export default function Newsletter() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
               >
-                Thank you for subscribing! You'll receive our updates soon.
+                Thank you for subscribing! You&apos;ll receive our updates soon.
               </motion.p>
             )}
           </motion.form>

@@ -52,7 +52,7 @@ export default function AboutPage() {
               We envision a thriving community of tech enthusiasts who are equipped with cutting-edge skills and connected to industry professionals. Our aim is to make ECU a hub for technological innovation and talent development.
             </p>
             <p>
-              By fostering a collaborative environment where students can learn, create, and grow together, we're building the next generation of technology leaders.
+              By fostering a collaborative environment where students can learn, create, and grow together, we&apos;re building the next generation of technology leaders.
             </p>
           </motion.div>
         </div>

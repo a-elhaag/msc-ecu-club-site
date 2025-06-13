@@ -468,10 +468,10 @@ export default function JoinUsPage() {
                   </svg>
                   <h2 className={styles.successTitle}>Application Submitted!</h2>
                   <p className={styles.successDescription}>
-                    Thank you for applying to join the Microsoft Student Club at ECU. We've received your application and will review it shortly.
+                    Thank you for applying to join the Microsoft Student Club at ECU. We&apos;ve received your application and will review it shortly.
                   </p>
                   <p className={styles.successNext}>
-                    Next steps: You'll receive an email within 3-5 business days regarding your application status and upcoming club events.
+                    Next steps: You&apos;ll receive an email within 3-5 business days regarding your application status and upcoming club events.
                   </p>
                 </motion.div>
               ) : (

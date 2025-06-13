@@ -113,7 +113,7 @@ export default function ContactPage() {
         >
           <h1 className={styles.contactTitle}>Get in Touch</h1>
           <p className={styles.contactSubtitle}>
-            Have questions about the club or want to collaborate? We'd love to hear from you!
+            Have questions about the club or want to collaborate? We&apos;d love to hear from you!
           </p>
         </motion.div>
       </section>
