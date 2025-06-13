@@ -21,11 +21,11 @@ export default function AboutPage() {
       </section>
 
       <section className={styles.aboutSection}>
-        <div className={styles.aboutGrid}>
+        <div className={styles.fullWidthSection}>
           <motion.div 
-            className={styles.aboutText}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            className={styles.aboutTextFull}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <h2 className={styles.sectionTitle}>Our Mission</h2>
@@ -36,31 +36,16 @@ export default function AboutPage() {
               Our mission is to empower students with technical skills, industry connections, and leadership opportunities that prepare them for successful careers in technology.
             </p>
           </motion.div>
-          <motion.div
-            className={styles.aboutImage}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-          </motion.div>
         </div>
       </section>
 
       <section className={styles.aboutSection}>
-        <div className={`${styles.aboutGrid} ${styles.reversed}`}>
+        <div className={styles.fullWidthSection}>
           <motion.div 
-            className={styles.aboutImage}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            className={styles.aboutTextFull}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-          >
-   
-          </motion.div>
-          <motion.div 
-            className={styles.aboutText}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
           >
             <h2 className={styles.sectionTitle}>Our Vision</h2>
             <p>
