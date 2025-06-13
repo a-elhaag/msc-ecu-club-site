@@ -24,15 +24,7 @@ export default function NavBar() {
   return (
     <nav className={styles.nav}>
       <div className={`container ${styles.navContainer}`}>
-        <Link href="/" className={styles.logo}>
-          <Image 
-            src="/Logo.png" 
-            alt="MSC ECU Logo" 
-            width={144}
-            height={108} 
-            style={{ marginRight: '1px' }}
-          />
-        </Link>
+        <div className={styles.spacer}></div>
         
         <button className={styles.menuButton} onClick={toggleMenu} aria-label="Toggle menu">
           {isOpen ? '✕' : '☰'}

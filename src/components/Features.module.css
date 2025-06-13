@@ -26,7 +26,7 @@
 .featuresGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 80px;
   position: relative;
   z-index: 2;
 }

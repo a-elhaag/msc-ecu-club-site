@@ -42,23 +42,6 @@ export default function AboutPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <div className="glass-card network-bg" style={{
-              width: 400,
-              height: 400,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              position: 'relative',
-              overflow: 'hidden'
-            }}>
-              <span className="floating-element" style={{
-                fontSize: '2.5rem',
-                fontWeight: 'bold',
-                color: '#2382fe'
-              }}>
-                MSC ECU
-              </span>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -71,23 +54,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="glass-card network-bg" style={{
-              width: 400,
-              height: 400,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              position: 'relative',
-              overflow: 'hidden'
-            }}>
-              <span className="floating-element" style={{
-                fontSize: '2.5rem',
-                fontWeight: 'bold',
-                color: '#2382fe'
-              }}>
-                Our Vision
-              </span>
-            </div>
+   
           </motion.div>
           <motion.div 
             className={styles.aboutText}
