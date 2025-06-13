@@ -30,8 +30,13 @@ export function Button({
 
   return (
     <motion.button
+      whileHover={{ y: -3 }}
       whileTap={{ scale: 0.98 }}
-      transition={{ duration: 0.1 }}
+      transition={{ 
+        type: "spring", 
+        stiffness: 400, 
+        damping: 15 
+      }}
       className={buttonClasses}
       {...props}
     >

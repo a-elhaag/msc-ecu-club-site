@@ -1,7 +1,7 @@
 .button {
   background: #2382fe;
   color: white;
-  padding: 10px 16px;
+  padding: 12px 18px;
   border: 2px solid #2382fe;
   border-radius: 20px;
   font-weight: 500;
@@ -10,32 +10,65 @@
   box-shadow: rgba(35, 130, 254, 0.2) 0px 0px 0px 2px, 
               rgba(35, 130, 254, 0.1) 0px 3px 6px, 
               rgba(35, 130, 254, 0.2) 0px 1px 2px;
-  transition: all 250ms ease-in-out;
+  transition: all 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  min-width: 100px;
+  gap: 8px;
+  min-width: 120px;
   text-align: center;
   position: relative;
   overflow: hidden;
   z-index: 1;
   backdrop-filter: blur(5px);
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+/* Add subtle pulse animation on hover */
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: inherit;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 500ms ease;
+}
+
+.button:hover::before {
+  opacity: 1;
+  transform: scale(1.5);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
 }
 
 .button:hover {
   background: #146fd9;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(35, 130, 254, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(35, 130, 254, 0.25);
 }
 
 .button:active {
   background: #0e5cb2;
-  transform: translateY(1px);
-}
-
-.button:active {
-  transform: translateY(1px);
+  transform: translateY(0);
   box-shadow: var(--box-shadow);
 }
 
@@ -49,10 +82,15 @@
               rgba(35, 130, 254, 0.1) 0px 2px 5px;
 }
 
+.button.secondary::before {
+  background: rgba(35, 130, 254, 0.05);
+}
+
 .button.secondary:hover {
-  background: rgba(35, 130, 254, 0.1);
+  background: rgba(255, 255, 255, 0.95);
   color: #146fd9;
-  transform: translateY(-2px);
+  border-color: #146fd9;
+  transform: translateY(-3px);
   box-shadow: rgba(35, 130, 254, 0.2) 0px 0px 0px 2px, 
               rgba(35, 130, 254, 0.15) 0px 5px 15px, 
               rgba(35, 130, 254, 0.2) 0px 2px 4px;
