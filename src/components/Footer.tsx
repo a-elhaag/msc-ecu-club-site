@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Footer.module.css';
 import { motion } from 'framer-motion';
 
@@ -12,15 +13,17 @@ export default function Footer() {
         <div className={styles.footerGrid}>
           <div className={styles.footerCol}>
             <Link href="/" className={styles.logo}>
-              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              MSC ECU
+              <Image 
+                src="/Logo.png" 
+                alt="MSC ECU Logo" 
+                width={144}
+                height={108} 
+                style={{ marginRight: '10px' }}
+              />
+              
             </Link>
             <p className={styles.footerText}>
-              Microsoft Student Club at Edith Cowan University aims to foster innovation and technological advancement among students.
+              Microsoft Student Club at Egyptian Chinese University aims to foster innovation and technological advancement among students.
             </p>
           </div>
           
@@ -38,9 +41,9 @@ export default function Footer() {
             <h3 className={styles.footerHeading}>Resources</h3>
             <ul className={styles.footerLinks}>
               <li><a href="https://www.microsoft.com/en-au/education/students" target="_blank" rel="noopener noreferrer">Microsoft for Students</a></li>
-              <li><a href="https://www.ecu.edu.au/" target="_blank" rel="noopener noreferrer">ECU Website</a></li>
-              <li><Link href="/privacy">Privacy Policy</Link></li>
-              <li><Link href="/terms">Terms of Use</Link></li>
+              <li><a href="https://learn.microsoft.com/" target="_blank" rel="noopener noreferrer">Microsoft Learn</a></li>
+              <li><a href="https://mvp.microsoft.com/" target="_blank" rel="noopener noreferrer">Microsoft MVP</a></li>
+              <li><a href="https://www.ecu.edu.eg/" target="_blank" rel="noopener noreferrer">ECU Website</a></li>
             </ul>
           </div>
           
@@ -91,10 +94,12 @@ export default function Footer() {
                 </svg>
               </motion.a>
             </div>
-            
             <div className={styles.contactInfo}>
-              <p><strong>Email:</strong> <a href="mailto:contact@mscecu.org">contact@mscecu.org</a></p>
-              <p><strong>Campus:</strong> Joondalup Campus, ECU</p>
+              <p><strong>Campuses:</strong></p>
+              <ul>
+                <li>Nasr City</li>
+                <li>Gesr El Suez</li>
+              </ul>
             </div>
           </div>
         </div>

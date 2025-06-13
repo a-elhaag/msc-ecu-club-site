@@ -44,6 +44,9 @@ export default function Newsletter() {
   
   return (
     <section className={styles.newsletter}>
+      <div className={`${styles.floatingCircle} ${styles.circle1}`}></div>
+      <div className={`${styles.floatingCircle} ${styles.circle2}`}></div>
+      <div className={`${styles.floatingCircle} ${styles.circle3}`}></div>
       <div className="container">
         <div className={styles.newsletterContent}>
           <motion.div 

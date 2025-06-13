@@ -15,7 +15,7 @@ export default function AboutPage() {
         >
           <h1 className={styles.aboutTitle}>About MSC ECU</h1>
           <p className={styles.aboutSubtitle}>
-            Empowering students through technology and community at Edith Cowan University
+            Empowering students through technology and community at Egyptian Chinese University
           </p>
         </motion.div>
       </section>
@@ -42,13 +42,23 @@ export default function AboutPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <Image 
-              src="/globe.svg"
-              alt="MSC ECU Mission"
-              width={400}
-              height={400}
-              className={styles.floatingImage}
-            />
+            <div className="glass-card network-bg" style={{
+              width: 400,
+              height: 400,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              position: 'relative',
+              overflow: 'hidden'
+            }}>
+              <span className="floating-element" style={{
+                fontSize: '2.5rem',
+                fontWeight: 'bold',
+                color: '#2382fe'
+              }}>
+                MSC ECU
+              </span>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -61,13 +71,23 @@ export default function AboutPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Image 
-              src="/file.svg"
-              alt="MSC ECU Vision"
-              width={400}
-              height={400}
-              className={styles.floatingImage}
-            />
+            <div className="glass-card network-bg" style={{
+              width: 400,
+              height: 400,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              position: 'relative',
+              overflow: 'hidden'
+            }}>
+              <span className="floating-element" style={{
+                fontSize: '2.5rem',
+                fontWeight: 'bold',
+                color: '#2382fe'
+              }}>
+                Our Vision
+              </span>
+            </div>
           </motion.div>
           <motion.div 
             className={styles.aboutText}
@@ -114,27 +134,33 @@ export default function AboutPage() {
             },
             { 
               name: 'Aisha Patel', 
-              role: 'Events Coordinator', 
+              role: 'Tech101 Lead', 
               image: '/globe.svg', 
-              bio: 'IT major specializing in user experience and event management.' 
+              bio: 'IT major specializing in teaching programming fundamentals to beginners.' 
             },
             { 
               name: 'Jason Kim', 
-              role: 'Technical Lead', 
+              role: 'Media & Marketing Lead', 
               image: '/next.svg', 
-              bio: 'Web development enthusiast with experience in full-stack projects.' 
+              bio: 'Digital media specialist with expertise in content creation and social strategy.' 
             },
             { 
               name: 'Emma Wilson', 
-              role: 'Marketing Director', 
+              role: 'HR Team Lead', 
               image: '/vercel.svg', 
-              bio: 'Dual major in IT and Business with a passion for digital marketing.' 
+              bio: 'Dual major in IT and Business managing member recruitment and engagement.' 
             },
             { 
               name: 'David Nguyen', 
-              role: 'Treasurer', 
+              role: 'Operations Lead', 
               image: '/file.svg', 
-              bio: 'Finance and Computer Science student managing club resources.' 
+              bio: 'Project Management student coordinating club logistics and events.' 
+            },
+            { 
+              name: 'Layla Hassan', 
+              role: 'PR Team Lead', 
+              image: '/window.svg', 
+              bio: 'Communications major handling external partnerships and public relations.' 
             }
           ].map((member, index) => (
             <motion.div 

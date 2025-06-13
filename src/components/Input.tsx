@@ -21,17 +21,21 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       <div className={styles.inputWrapper}>
         {label && <label className={styles.label}>{label}</label>}
         <div className={styles.inputContainer}>
-          <motion.input
+          <motion.div
             initial={{ borderColor: 'var(--bg-secondary)' }}
             whileFocus={{ 
               borderColor: error ? 'var(--danger)' : 'var(--primary)', 
               boxShadow: error ? '0 0 0 3px rgba(231,76,60,0.2)' : '0 0 0 3px rgba(22,93,158,0.2)' 
             }}
             transition={{ duration: .2 }}
-            ref={ref}
-            className={inputClasses}
-            {...props}
-          />
+            className={styles.motionWrapper}
+          >
+            <input
+              ref={ref}
+              className={inputClasses}
+              {...props}
+            />
+          </motion.div>
           {icon && <span className={styles.inputIcon}>{icon}</span>}
         </div>
         {error && <div className={styles.errorMessage}>{error}</div>}

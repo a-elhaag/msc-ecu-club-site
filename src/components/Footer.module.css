@@ -3,7 +3,8 @@
   color: var(--text-base);
   padding: 60px 0 20px;
   margin-top: 60px;
-  border-top: 1px solid rgba(0,0,0,0.1);
+  border-top: 1px solid rgba(35, 130, 254, 0.15);
+  box-shadow: 0 -5px 15px rgba(35, 130, 254, 0.05);
 }
 
 .footerContainer {
@@ -73,19 +74,29 @@
 }
 
 .socialLink {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--primary);
-  color: white;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--border-radius);
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(35, 130, 254, 0.2);
+  color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all var(--transition-speed);
+  box-shadow: rgba(35, 130, 254, 0.1) 0px 0px 0px 1px, 
+              rgba(35, 130, 254, 0.05) 0px 2px 4px;
 }
 
 .socialLink:hover {
-  background-color: var(--primary-dark);
+  background-color: rgba(35, 130, 254, 0.1);
+  color: #146fd9;
+  border-color: rgba(35, 130, 254, 0.4);
+  transform: translateY(-3px);
+  box-shadow: rgba(35, 130, 254, 0.2) 0px 0px 0px 2px, 
+              rgba(35, 130, 254, 0.15) 0px 5px 15px, 
+              rgba(35, 130, 254, 0.1) 0px 2px 4px;
 }
 
 .contactInfo {

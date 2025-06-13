@@ -1,9 +1,9 @@
 'use client';
-import { motion } from 'framer-motion';
+import { motion, HTMLMotionProps } from 'framer-motion';
 import styles from './Button.module.css';
-import { ButtonHTMLAttributes, ReactNode } from 'react';
+import { ReactNode } from 'react';
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends Omit<HTMLMotionProps<'button'>, 'style'> {
   variant?: 'primary' | 'secondary';
   size?: 'small' | 'medium' | 'large';
   fullWidth?: boolean;
@@ -30,14 +30,13 @@ export function Button({
 
   return (
     <motion.button
-      whileHover={{ scale: 1.03 }}
-      whileTap={{ scale: 0.97 }}
-      transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ duration: 0.1 }}
       className={buttonClasses}
       {...props}
     >
       {icon && <span className={styles.icon}>{icon}</span>}
-      {children}
+      {children as ReactNode}
     </motion.button>
   );
 }

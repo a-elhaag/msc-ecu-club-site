@@ -1,22 +1,29 @@
 .input {
   width: 100%;
   padding: 12px 16px;
-  border: 2px solid var(--bg-secondary);
+  border: 2px solid rgba(35, 130, 254, 0.2);
   border-radius: var(--border-radius);
-  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
   color: var(--text-dark);
-  font-size: 1rem;
+  font-size: 15px;
   outline: none;
-  transition: all var(--transition-speed);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: rgba(35, 130, 254, 0.1) 0px 0px 0px 1px, 
+              rgba(35, 130, 254, 0.05) 0px 2px 4px;
 }
 
 .input:focus {
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(22, 93, 158, 0.2);
+  border-color: #2382fe;
+  box-shadow: rgba(35, 130, 254, 0.2) 0px 0px 0px 2px, 
+              rgba(35, 130, 254, 0.15) 0px 3px 8px;
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px);
 }
 
 .input::placeholder {
   color: #aaa;
+  transition: all 200ms ease;
 }
 
 .inputWrapper {
@@ -24,11 +31,21 @@
   width: 100%;
 }
 
+.inputWrapper:hover .input:not(:focus) {
+  border-color: rgba(35, 130, 254, 0.4);
+}
+
 .label {
   display: block;
   margin-bottom: 8px;
   font-weight: 500;
-  color: var(--text-dark);
+  font-size: 14px;
+  color: rgba(55, 53, 47, 0.75);
+  transition: color 200ms ease;
+}
+
+.inputWrapper:focus-within .label {
+  color: #2382fe;
 }
 
 .errorMessage {

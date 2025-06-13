@@ -145,13 +145,14 @@ export default function ContactPage() {
               <div className={styles.contactItem}>
                 <div className={styles.contactIcon}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M17 18C17 16.6739 16.4732 15.4021 15.5355 14.4645C14.5979 13.5268 13.3261 13 12 13C10.6739 13 9.40215 13.5268 8.46447 14.4645C7.52678 15.4021 7 16.6739 7 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 10C13.6569 10 15 8.65685 15 7C15 5.34315 13.6569 4 12 4C10.3431 4 9 5.34315 9 7C9 8.65685 10.3431 10 12 10Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
                 <div className={styles.contactText}>
-                  <h3>Location</h3>
-                  <p>Joondalup Campus, Building 18<br />Edith Cowan University<br />270 Joondalup Drive, Joondalup</p>
+                  <h3>Campus Locations</h3>
+                  <p>Nasr City Branch<br />Gesr El Suez Branch<br />Cairo, Egypt</p>
                 </div>
               </div>
               
@@ -174,14 +175,14 @@ export default function ContactPage() {
               <div className={styles.contactItem}>
                 <div className={styles.contactIcon}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 6V12L16 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M20 7L12 13L4 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <rect x="2" y="3" width="20" height="18" rx="2" stroke="currentColor" strokeWidth="1.5"/>
+                    <path d="M3 7H21V17C21 18.1046 20.1046 19 19 19H5C3.89543 19 3 18.1046 3 17V7Z" stroke="currentColor" strokeWidth="1.5"/>
                   </svg>
                 </div>
                 <div className={styles.contactText}>
-                  <h3>Club Hours</h3>
-                  <p>Monday - Friday: 10:00 AM - 4:00 PM</p>
-                  <p>Saturday - Sunday: Closed</p>
+                  <h3>Subscribe to Newsletter</h3>
+                  <p>Stay updated with our latest events and opportunities</p>
                 </div>
               </div>
             </div>
@@ -278,19 +279,25 @@ export default function ContactPage() {
         </div>
       </section>
       
-      <section className={styles.mapSection}>
-        <h2 className={styles.sectionTitle}>Find Us</h2>
-        <div className={styles.map}>
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3368.580313061474!2d115.76683291519885!3d-31.750937981288443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2bcd5cfcb3aad839%3A0x68e4dff4a27c9230!2sEdith%20Cowan%20University%20Joondalup%20Campus!5e0!3m2!1sen!2sau!4v1624986216238!5m2!1sen!2sau" 
-            width="100%" 
-            height="450" 
-            style={{ border: 0 }} 
-            allowFullScreen={true} 
-            loading="lazy"
-            title="ECU Joondalup Campus Map"
-          ></iframe>
-        </div>
+      <section className={styles.additionalInfoSection}>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+          className={styles.additionalInfoCard}
+        >
+          <h2 className={styles.sectionTitle}>Club Hours</h2>
+          <div className={styles.scheduleInfo}>
+            <div className={styles.scheduleItem}>
+              <span>Monday - Friday:</span>
+              <span>10:00 AM - 4:00 PM</span>
+            </div>
+            <div className={styles.scheduleItem}>
+              <span>Saturday - Sunday:</span>
+              <span>Closed</span>
+            </div>
+          </div>
+        </motion.div>
       </section>
     </div>
   );

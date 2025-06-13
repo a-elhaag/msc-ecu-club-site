@@ -57,7 +57,7 @@ export default function Testimonials() {
           className={styles.testimonialHeader}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
         >
           <h2 className={styles.testimonialTitle}>Student Success Stories</h2>
           <p className={styles.testimonialSubtitle}>
@@ -71,8 +71,8 @@ export default function Testimonials() {
             onClick={goToPrevious}
             aria-label="Previous testimonial"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </button>
           
@@ -83,14 +83,10 @@ export default function Testimonials() {
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.4 }}
                 className={styles.testimonialCard}
               >
                 <div className={styles.testimonialQuote}>
-                  <svg className={styles.quoteIcon} width="40" height="40" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 11H6C5.46957 11 4.96086 10.7893 4.58579 10.4142C4.21071 10.0391 4 9.53043 4 9V7C4 6.46957 4.21071 5.96086 4.58579 5.58579C4.96086 5.21071 5.46957 5 6 5H7C7.53043 5 8.03914 5.21071 8.41421 5.58579C8.78929 5.96086 9 6.46957 9 7V12C9 13.0609 8.57857 14.0783 7.82843 14.8284C7.07828 15.5786 6.06087 16 5 16" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M19 11H15C14.4696 11 13.9609 10.7893 13.5858 10.4142C13.2107 10.0391 13 9.53043 13 9V7C13 6.46957 13.2107 5.96086 13.5858 5.58579C13.9609 5.21071 14.4696 5 15 5H16C16.5304 5 17.0391 5.21071 17.4142 5.58579C17.7893 5.96086 18 6.46957 18 7V12C18 13.0609 17.5786 14.0783 16.8284 14.8284C16.0783 15.5786 15.0609 16 14 16" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
                   <p>{testimonials[currentIndex].quote}</p>
                 </div>
                 
@@ -99,8 +95,8 @@ export default function Testimonials() {
                     <Image 
                       src={testimonials[currentIndex].image}
                       alt={testimonials[currentIndex].name}
-                      width={60}
-                      height={60}
+                      width={46}
+                      height={46}
                     />
                   </div>
                   <div className={styles.authorInfo}>
@@ -117,8 +113,8 @@ export default function Testimonials() {
             onClick={goToNext}
             aria-label="Next testimonial"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </button>
         </div>

@@ -17,6 +17,7 @@
   height: 300px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
+  animation: float 15s ease-in-out infinite alternate;
 }
 
 .newsletter::after {
@@ -28,6 +29,50 @@
   height: 200px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.05);
+  animation: float 18s ease-in-out infinite alternate-reverse;
+}
+
+.floatingCircle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.circle1 {
+  width: 60px;
+  height: 60px;
+  top: 40%;
+  left: 10%;
+  animation: float 12s ease-in-out infinite;
+}
+
+.circle2 {
+  width: 40px;
+  height: 40px;
+  bottom: 30%;
+  right: 15%;
+  animation: float 10s ease-in-out infinite 1s;
+}
+
+.circle3 {
+  width: 25px;
+  height: 25px;
+  top: 20%;
+  right: 30%;
+  animation: float 8s ease-in-out infinite 2s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
 }
 
 .newsletterContent {
@@ -48,39 +93,53 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 16px;
-  color: white;
 }
 
 .newsletterSubtitle {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 0;
 }
 
 .newsletterForm {
   width: 100%;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  max-width: 500px;
 }
 
 .inputGroup {
   display: flex;
-  gap: 16px;
+  align-items: stretch;
+  gap: 12px;
+  position: relative;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  backdrop-filter: blur(10px);
 }
 
 .inputGroup input {
-  flex: 1;
-  border-color: white;
+  border-color: transparent;
+  background: white;
 }
 
 .successMessage {
-  color: white;
-  background: rgba(46, 204, 113, 0.3);
-  padding: 12px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.15);
   border-radius: var(--border-radius);
-  border: 1px solid rgba(46, 204, 113, 0.5);
+  backdrop-filter: blur(10px);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
 }
 
 @media (max-width: 768px) {

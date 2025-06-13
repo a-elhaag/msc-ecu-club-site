@@ -440,10 +440,10 @@ export default function JoinUsPage() {
                 <li>Current ECU student</li>
                 <li>Interest in technology and Microsoft ecosystem</li>
                 <li>Willingness to participate in club activities</li>
-                <li>Annual membership fee: $20</li>
+                <li>Passion for learning and collaboration</li>
               </ul>
               <p className={styles.note}>
-                Note: Membership fees contribute to event costs, swag, and refreshments at club meetings.
+                Note: Membership is free for all ECU students.
               </p>
             </div>
           </motion.div>
@@ -471,7 +471,7 @@ export default function JoinUsPage() {
                     Thank you for applying to join the Microsoft Student Club at ECU. We've received your application and will review it shortly.
                   </p>
                   <p className={styles.successNext}>
-                    Next steps: You'll receive an email within 3-5 business days regarding your application status and payment instructions.
+                    Next steps: You'll receive an email within 3-5 business days regarding your application status and upcoming club events.
                   </p>
                 </motion.div>
               ) : (

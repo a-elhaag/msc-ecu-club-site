@@ -8,6 +8,9 @@ import Link from 'next/link';
 export default function Hero() {
   return (
     <section className={styles.hero}>
+      <div className={`${styles.floatingElement} ${styles.floatingElement1}`}></div>
+      <div className={`${styles.floatingElement} ${styles.floatingElement2}`}></div>
+      <div className={`${styles.floatingElement} ${styles.floatingElement3}`}></div>
       <div className="container">
         <div className={styles.heroContent}>
           <motion.div 
@@ -20,16 +23,12 @@ export default function Hero() {
               Empower Your Tech Journey with MSC ECU
             </h1>
             <p className={styles.heroSubtitle}>
-              Microsoft Student Club at Edith Cowan University connects students with technology, innovation, and career opportunities through workshops, hackathons, and industry engagement.
+              Microsoft Student Club at Egyptian Chinese University connects students with technology, innovation, and career opportunities through workshops, hackathons, and industry engagement.
             </p>
             <div className={styles.heroCtas}>
               <Link href="/joinus">
                 <Button size="large">
                   Join the Club
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
                 </Button>
               </Link>
               <Link href="/events">
@@ -46,13 +45,16 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Image
-              src="/globe.svg"
-              alt="MSC ECU Global Network"
-              width={500}
-              height={500}
-              priority
-            />
+            <div className={styles.heroGraphic}>
+              <Image 
+                src="/Logo.png" 
+                alt="MSC ECU Logo" 
+                width={320}
+                height={240}
+                className={styles.logoImage}
+                priority
+              />
+            </div>
           </motion.div>
         </div>
         

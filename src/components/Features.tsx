@@ -101,6 +101,8 @@ export default function Features() {
 
   return (
     <section className={styles.features} ref={ref}>
+      <div className={`${styles.floatingShape} ${styles.shape1}`}></div>
+      <div className={`${styles.floatingShape} ${styles.shape2}`}></div>
       <div className="container">
         <motion.div 
           className={styles.featuresHeader}
